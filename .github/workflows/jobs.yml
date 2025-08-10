@@ -3,7 +3,7 @@ on:
 
 jobs:
   job_1:
-    runs-on: ubbuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - run: "echo job ${{ github.job }}"
 
