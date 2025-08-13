@@ -1,4 +1,7 @@
-on: push
+on: 
+  push:
+    branches:
+      - master
 jobs:
     ascii_job:
         runs-on: ubuntu-latest
@@ -8,6 +11,6 @@ jobs:
 
             - name: List Repo files
               run: ls -ltra
-              
+
             - name: Executing Shell Script
               run: ./ascii-script.sh
