@@ -1,11 +1,16 @@
-on: push
+on: 
+  push:
+    branches:
+      - master
 jobs:
     ascii_job:
         runs-on: ubuntu-latest
         steps:
-            - name: Checkout Repo
-              uses: actions/checkout@v4
-            - name: List Repo files
-              run: ls -ltra
-            - name: Executing Shell Script
-              run: ./ascii-script.sh
+         - name: Checkout Repo
+           uses: actions/checkout@v4
+
+         - name: List all repo files
+           run: ls -R
+
+         - name: Executing Shell Script
+           run: ./ascii-script.sh
